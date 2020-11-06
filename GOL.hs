@@ -1,4 +1,3 @@
-{-***690022392 - Computer Languages and Representations CA1 - Q2***-}
 import Data.List ( intercalate, nub )
 
 type Point                                              -- New type to represent a coordinate
@@ -8,19 +7,16 @@ glider :: [Point]                                       -- A common infinite pat
 glider                                                  -- game of life
     =[(0,2), (1,3), (2,1), (2,2), (2,3)]
 
-{-*Question 2.1*-}
 pretty :: [[String]] -> String                          -- Using Data.List.intercalate
 pretty [] = []                                          -- This function inserts "\n" between
 pretty (x:xs)                                           -- the elements of the list x,
     =  (intercalate "\n" x) ++ "\n" ++ pretty xs        -- and concatenates the result
  
-{-*Question 2.2*-}
 visualisation :: Int -> Int -> [[Point]] -> [[String]]  -- Displays an n x m grid containing
 visualisation _ _ [] = []                               -- #s for live cells and .s for dead
 visualisation a b ((xxs):rest)
     = concatenator (chunks a (findGrid a b (xxs))) : visualisation a b rest
 
-{-*Question 2.3*-}
 evolution :: [Point] -> [[Point]]                       -- Produces a potentially-infinite
                                                         -- sequence of generations of live cells 
 evolution xxs
