@@ -1,5 +1,5 @@
 # Haskell-Game-of-Life
---A simple implementation of Conway's Game of life in Haskell--
+### A simple functional implementation of Conway's Game of life in Haskell
 
 The game of life involves configuring a cellular automaton and then observing how it evolves according to three rules.
 The cells are organised as a two-dimensional grid, and are either live or dead. The three rules of evolution are:
